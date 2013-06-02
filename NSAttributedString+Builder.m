@@ -26,9 +26,7 @@
 
 - (NSAttributedString *)addFont:(UIFont *)font range:(NSRange)range
 {
-    CTFontRef ctfont = CTFontCreateWithName((__bridge CFStringRef)font.fontName, font.pointSize, NULL);
-    NSDictionary *attributes = [NSDictionary dictionaryWithObject:(__bridge id)(ctfont) forKey:(NSString *)kCTFontAttributeName];
-    CFRelease(ctfont);
+    NSDictionary *attributes = @{NSFontAttributeName: font};
     
     return [self addAttributes:attributes range:range];
 }
@@ -43,7 +41,7 @@
 
 - (NSAttributedString *)addTextColor:(UIColor *)color range:(NSRange)range
 {
-    NSDictionary *attributes = [NSDictionary dictionaryWithObject:(id)color.CGColor forKey:(NSString *)kCTForegroundColorAttributeName];
+    NSDictionary *attributes = @{NSForegroundColorAttributeName: color};
     
     return [self addAttributes:attributes range:range];
 }
@@ -58,7 +56,7 @@
 
 - (NSAttributedString *)addStrokeColor:(UIColor *)color range:(NSRange)range
 {
-    NSDictionary *attributes = [NSDictionary dictionaryWithObject:(id)color.CGColor forKey:(NSString *)kCTStrokeColorAttributeName];
+    NSDictionary *attributes = @{NSStrokeColorAttributeName: color};
     
     return [self addAttributes:attributes range:range];
 }
@@ -73,7 +71,7 @@
 
 - (NSAttributedString *)addStrokeWidth:(NSNumber *)width range:(NSRange)range
 {
-    NSDictionary *attributes = [NSDictionary dictionaryWithObject:width forKey:(NSString *)kCTStrokeWidthAttributeName];
+    NSDictionary *attributes = @{NSStrokeWidthAttributeName: width};
     
     return [self addAttributes:attributes range:range];
 }
@@ -88,7 +86,7 @@
 
 - (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle range:(NSRange)range
 {
-    NSDictionary *attributes = [NSDictionary dictionaryWithObject:underlineStyle forKey:(NSString *)kCTUnderlineStyleAttributeName];
+    NSDictionary *attributes = @{NSUnderlineStyleAttributeName: underlineStyle};
     
     return [self addAttributes:attributes range:range];
 }
