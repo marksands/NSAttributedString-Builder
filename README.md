@@ -28,4 +28,4 @@ label.attributedText = [[[[NSAttributedString alloc] initWithString:@"Lorem ipsu
                        addUnderline:@(kCTUnderlineStyleThick) string:@"sit amet"];
 ```
 
-For the UILabel/iOS6+ version, check out the iOS6 branch.
+For the UILabel/iOS6+ version, check out the [iOS6 branch](https://github.com/marksands/NSAttributedString-Builder/tree/iOS6).
