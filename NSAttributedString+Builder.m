@@ -98,4 +98,49 @@
     return [self addUnderline:underlineStyle range:range];
 }
 
+
+- (NSAttributedString *)addParagraphStyle:(NSParagraphStyle *)paragraphStyle range:(NSRange)range
+{
+    NSDictionary *attributes = @{NSParagraphStyleAttributeName: paragraphStyle};
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addParagraphStyle:(NSParagraphStyle *)paragraphStyle string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addParagraphStyle:paragraphStyle range:range];
+}
+
+
+- (NSAttributedString *)addLigature:(NSNumber *)ligature range:(NSRange)range
+{
+    NSDictionary *attributes = @{NSLigatureAttributeName: ligature};
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addLigature:(NSNumber *)ligature string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addLigature:ligature range:range];
+}
+
+
+- (NSAttributedString *)addKerning:(NSNumber *)kerning range:(NSRange)range
+{
+    NSDictionary *attributes = @{NSKernAttributeName: kerning};
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addKerning:(NSNumber *)kerning string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addKerning:kerning range:range];
+}
+
 @end

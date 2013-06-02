@@ -27,4 +27,13 @@
 - (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle range:(NSRange)range;
 - (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle string:(NSString *)string;
 
+- (NSAttributedString *)addParagraphStyle:(NSParagraphStyle *)paragraphStyle range:(NSRange)range;
+- (NSAttributedString *)addParagraphStyle:(NSParagraphStyle *)paragraphStyle string:(NSString *)string;
+
+- (NSAttributedString *)addLigature:(NSNumber *)ligature range:(NSRange)range;
+- (NSAttributedString *)addLigature:(NSNumber *)ligature string:(NSString *)string;
+
+- (NSAttributedString *)addKerning:(NSNumber *)kerning range:(NSRange)range;
+- (NSAttributedString *)addKerning:(NSNumber *)kerning string:(NSString *)string;
+
 @end
