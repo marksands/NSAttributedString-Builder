@@ -24,4 +24,7 @@
 - (NSAttributedString *)addStrokeWidth:(NSNumber *)width range:(NSRange)range;
 - (NSAttributedString *)addStrokeWidth:(NSNumber *)width string:(NSString *)string;
 
+- (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle range:(NSRange)range;
+- (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle string:(NSString *)string;
+
 @end

@@ -85,4 +85,19 @@
     return [self addStrokeWidth:width range:range];
 }
 
+
+- (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle range:(NSRange)range
+{
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:underlineStyle forKey:(NSString *)kCTUnderlineStyleAttributeName];
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addUnderline:underlineStyle range:range];
+}
+
 @end
