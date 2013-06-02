@@ -100,4 +100,62 @@
     return [self addUnderline:underlineStyle range:range];
 }
 
+
+- (NSAttributedString *)addParagraphStyle:(id)paragraphStyle range:(NSRange)range
+{
+    [NSException raise:NSInternalInconsistencyException format:@"Not Implemented"];
+    return self;
+}
+
+- (NSAttributedString *)addParagraphStyle:(id)paragraphStyle string:(NSString *)string
+{
+    [NSException raise:NSInternalInconsistencyException format:@"Not Implemented"];
+    return self;
+}
+
+
+- (NSAttributedString *)addLigature:(NSNumber *)ligature range:(NSRange)range
+{
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:ligature forKey:(NSString *)kCTLigatureAttributeName];
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addLigature:(NSNumber *)ligature string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addLigature:ligature range:range];
+}
+
+
+- (NSAttributedString *)addKerning:(NSNumber *)kerning range:(NSRange)range
+{
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:kerning forKey:(NSString *)kCTKernAttributeName];
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addKerning:(NSNumber *)kerning string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addKerning:kerning range:range];
+}
+
+
+- (NSAttributedString *)addVerticalForms:(BOOL)verticalForms range:(NSRange)range
+{
+    NSDictionary *attributes = [NSDictionary dictionaryWithObject:@(verticalForms) forKey:(NSString *)kCTVerticalFormsAttributeName];
+    
+    return [self addAttributes:attributes range:range];
+}
+
+- (NSAttributedString *)addVerticalForms:(BOOL)verticalForms string:(NSString *)string
+{
+    NSRange range = [[self string] rangeOfString:string];
+    
+    return [self addVerticalForms:verticalForms range:range];
+}
+
 @end
