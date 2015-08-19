@@ -1,18 +1,18 @@
 /*
  * The MIT License (MIT)
- * 
+ *
  * Copyright (c) 2015 Mark Sands
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 #import <Foundation/Foundation.h>
-#import <CoreText/CoreText.h>
+#import <UIKit/UIKit.h>
 
 @interface NSAttributedString (Builder)
 
@@ -40,8 +40,8 @@
 - (NSAttributedString *)addStrokeWidth:(NSNumber *)width range:(NSRange)range;
 - (NSAttributedString *)addStrokeWidth:(NSNumber *)width string:(NSString *)string;
 
-- (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle range:(NSRange)range;
-- (NSAttributedString *)addUnderline:(NSNumber *)underlineStyle string:(NSString *)string;
+- (NSAttributedString *)addUnderlineStyle:(NSNumber *)underlineStyle range:(NSRange)range;
+- (NSAttributedString *)addUnderlineStyle:(NSNumber *)underlineStyle string:(NSString *)string;
 
 - (NSAttributedString *)addParagraphStyle:(NSParagraphStyle *)paragraphStyle range:(NSRange)range;
 - (NSAttributedString *)addParagraphStyle:(NSParagraphStyle *)paragraphStyle string:(NSString *)string;
