@@ -28,4 +28,19 @@ label.attributedText = [[[[NSAttributedString alloc] initWithString:@"Lorem ipsu
                        addUnderline:@(kCTUnderlineStyleThick) string:@"sit amet"];
 ```
 
-For the UILabel/iOS6+ version, check out the iOS6 branch.
+or go nuts:
+
+```objective-c
+
+label.attributedText = [[[[[[[[[[NSAttributedString alloc] initWithString:@"Lorem ipsum dolar sit amet"]
+                              addFont:[UIFont systemFontOfSize:14] string:@"Lorem ipsum dolar sit amet"]
+                             addTextColor:[UIColor blackColor] string:@"Lorem ipsum dolar sit amet"]
+                            addFont:[UIFont systemFontOfSize:20] string:@"Lorem"]
+                           addStrokeColor:[UIColor greenColor] string:@"ipsum"]
+                          addStrokeWidth:@(-3) string:@"ipsum"]
+                         addUnderline:@(kCTUnderlineStyleThick) string:@"dolar"]
+                        addKerning:@5 string:@"sit"]
+                       addLigature:@2 string:@"amet"];
+```
+
+For the UILabel/iOS6+ version, check out the [iOS6 branch](https://github.com/marksands/NSAttributedString-Builder/tree/iOS6).
